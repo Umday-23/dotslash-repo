@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Speech to Text with Voice Enhancement</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Interactive Speech to Text</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Your external CSS link -->
 </head>
 <body>
   <div class="container">
     <h1>Speech to Text with Voice Enhancement</h1>
 
-    <label for="language-select">Select Language to Listen:</label>
+    <label for="language-select">🌐 Select Language to Listen:</label>
     <select id="language-select">
       <option value="en-US">English</option>
       <option value="es-ES">Spanish</option>
@@ -21,7 +22,7 @@
       <option value="ru-RU">Russian</option>
     </select>
 
-    <label for="display-language-select">Select Language to Display:</label>
+    <label for="display-language-select">📖 Select Language to Display:</label>
     <select id="display-language-select">
       <option value="en">English</option>
       <option value="es">Spanish</option>
@@ -33,21 +34,20 @@
     </select>
 
     <div class="c-button-container">
-      <!-- Gooey Button -->
-      <button class="c-button c-button--gooey" onclick="startRecognition()">
-        Hover me
-        <div class="c-button__blobs">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </button>
+      <button class="c-button c-button--gooey" onclick="startRecognition()">Start Listening</button>
     </div>
 
-    <div id="output"></div>
+    <div id="output">
+      <p>✨ Your transcription will appear here...</p>
+    </div>
+
+    <div id="sign-language-output">
+      <!-- Sign Language Output Placeholder -->
+      <p>Sign Language Placeholder</p>
+    </div>
 
     <div class="footer">
-      <p>Made with ❤️ by YourName</p>
+      <p>Made with ❤️ </p>
     </div>
   </div>
 
