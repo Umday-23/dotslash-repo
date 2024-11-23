@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech to Text with Voice Enhancement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Speech to Text with Voice Enhancement</h1>
+
+    <label for="language-select">Select Language to Listen:</label>
+    <select id="language-select">
+      <option value="en-US">English</option>
+      <option value="es-ES">Spanish</option>
+      <option value="fr-FR">French</option>
+      <option value="de-DE">German</option>
+      <option value="zh-CN">Chinese (Mandarin)</option>
+      <option value="ja-JP">Japanese</option>
+      <option value="ru-RU">Russian</option>
+    </select>
+
+    <label for="display-language-select">Select Language to Display:</label>
+    <select id="display-language-select">
+      <option value="en">English</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+      <option value="de">German</option>
+      <option value="zh">Chinese</option>
+      <option value="ja">Japanese</option>
+      <option value="ru">Russian</option>
+    </select>
+
+    <div class="c-button-container">
+      <!-- Gooey Button -->
+      <button class="c-button c-button--gooey" onclick="startRecognition()">
+        Hover me
+        <div class="c-button__blobs">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </button>
+    </div>
+
+    <div id="output"></div>
+
+    <div class="footer">
+      <p>Made with ❤️ by YourName</p>
+    </div>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
