@@ -1,4 +1,5 @@
 /* Universal Style */
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #2b2b2b, #1a1a1a, #333333, #4f4f4f);
@@ -14,14 +15,20 @@ body {
 }
 
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
     background: rgba(0, 0, 0, 0.85);
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 40px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
     max-width: 600px;
@@ -29,11 +36,18 @@ body {
     animation: fadeIn 2s ease-out;
     position: relative;
     overflow: hidden;
+    /* Added to contain children */
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1 {
@@ -42,12 +56,8 @@ h1 {
     color: #ffde7d;
     text-shadow: 0 5px 15px rgba(255, 223, 125, 0.6);
     letter-spacing: 2px;
-    animation: float 3s infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    text-transform: uppercase;
+    /* Added for emphasis */
 }
 
 label {
@@ -56,12 +66,15 @@ label {
     margin-top: 15px;
 }
 
+
 /* Enhanced Dropdown Menu */
+
 select {
     width: 100%;
     padding: 12px 15px;
     font-size: 16px;
-    background: #222;
+    background: #333;
+    /* Darker background for better visibility */
     color: #ffde7d;
     border: 2px solid #ffde7d;
     border-radius: 8px;
@@ -69,18 +82,24 @@ select {
     cursor: pointer;
     transition: all 0.3s ease;
     appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="%23ffde7d" d="M2 0L0 2h4zM0 3h4l-2 2z"/%3E%3C/svg%3E');
+    /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23ffde7d"><polygon points="0,0 20,0 10,10 "/></svg>');
+    /* Custom arrow */
     background-repeat: no-repeat;
     background-position: right 10px center;
+    /* Position of the custom arrow */
 }
 
 select:hover {
     border-color: #ff9a9e;
     color: #fff;
-    background-color: #333;
+    background-color: #444;
+    /* Darker on hover */
 }
 
+
 /* Gooey Button */
+
 button {
     padding: 15px 30px;
     font-size: 18px;
@@ -95,7 +114,7 @@ button {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
-    transform: scale(1);
+    /* Added for effect */
 }
 
 button:hover {
@@ -122,7 +141,9 @@ button:hover:after {
     height: 300%;
 }
 
+
 /* Output Area */
+
 #output {
     margin-top: 25px;
     padding: 20px;
@@ -135,6 +156,13 @@ button:hover:after {
     overflow-y: auto;
     text-align: left;
     box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+    /* Smooth background change */
+}
+
+#output:hover {
+    background: rgba(255, 255, 255, 0.2);
+    /* Change on hover */
 }
 
 #sign-language-output {
@@ -147,10 +175,4 @@ button:hover:after {
     margin-top: 30px;
     font-size: 14px;
     color: #f8f9fa;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 1; }
-}
+} 
